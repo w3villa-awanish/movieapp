@@ -6,7 +6,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 function Signin() {
 
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -75,6 +74,12 @@ function Signin() {
       console.error('Error during login:', error);
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem('token') ) {
+      navigate('/')
+     }
+  }, [navigate]);
 
   return (
     <>
