@@ -4,9 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import {
   MOVIE_LIST,
 } from "../../../endpoint";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { useLocation } from "react-router-dom";
 import { ColorRing } from 'react-loader-spinner'
 
