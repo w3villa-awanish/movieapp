@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.red-theme-heading {
+  color: #ec2326;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.padding40 {
+  padding: 80px 0px;
+}
+
+.grey_bg {
+  background: #f7f7f7;
+}
+
+.common-description {
+  color: #222222;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.green-heading {
+  color: #399e55;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 27px;
+}
+
+.aboutus-common-img-size {
+  width: 130px;
+  height: 130px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.download-btn {
+  background: #222222 !important;
+  color: #ffff !important;
+}
+
+.light_bg .breadcrumb {
+  background: rgb(0 0 0 / 20%);
+  padding: 0px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.light_bg .breadcrumb-item + .breadcrumb-item::before,
+.text_center_white .breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
+
+.text_center_white .breadcrumb {
+  justify-content: center !important;
+}
+
+@media screen and (max-width: 991px) {
+  .red-theme-heading {
+    font-size: 22px;
+  }
+  .common-description {
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .green-heading {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
+}

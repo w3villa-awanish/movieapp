@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="37" viewBox="0 0 36 37">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="16" height="18" transform="translate(0.478 0.294)" fill="#ec2326"/>
+    </clipPath>
+  </defs>
+  <g id="Group_503" data-name="Group 503" transform="translate(0.028 0.213)">
+    <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="18" cy="18.5" rx="18" ry="18.5" transform="translate(-0.028 -0.213)" fill="#ec2326" opacity="0.15"/>
+    <g id="Mask_Group_6" data-name="Mask Group 6" transform="translate(9.493 9.493)" clip-path="url(#clip-path)">
+      <g id="linkedin__x2C__social__x2C__media_x2C__icons_x2C_" transform="translate(0.883 1.683)">
+        <g id="Group_8" data-name="Group 8" transform="translate(0 0)">
+          <path id="Path_16" data-name="Path 16" d="M6.043,11.834v7.149H9.661v-9.9H6.043Z" transform="translate(-6.043 -4.289)" fill="#ec2326"/>
+          <path id="Path_17" data-name="Path 17" d="M15.147,9.131a3.455,3.455,0,0,0-2.893,1.251h-.131v-1.3H9.461v9.9h3v-4.8c0-1.288.124-2.53,1.7-2.53s1.574,1.469,1.574,2.62v4.71h3V13.656A12.569,12.569,0,0,0,18.7,12.2C18.478,10.333,17.668,9.131,15.147,9.131Z" transform="translate(-3.864 -4.289)" fill="#ec2326"/>
+          <path id="Path_18" data-name="Path 18" d="M7.878,6.157A1.723,1.723,0,1,0,9.6,7.88,1.722,1.722,0,0,0,7.878,6.157Z" transform="translate(-5.972 -6.157)" fill="#ec2326"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

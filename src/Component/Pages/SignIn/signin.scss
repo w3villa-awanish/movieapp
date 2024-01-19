@@ -1,0 +1,40 @@
+.signform {
+    background: #3a5e44;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px;
+      box-sizing: border-box;
+      border: 1px solid rgb(255 255 255 / 15%);
+      border-radius: 4px;
+      background: transparent;
+      color: #fff;
+      margin-bottom: 20px;
+      background: rgb(255 255 255 / 15%);
+    }
+    select {
+      height: 53px;
+    }
+    p {
+      padding: 10px 0px 10px 0px;
+      font-size: 13px;
+    }
+    button {
+      background-color: #399e55;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+
+  .signform input::placeholder {
+    color: #fff;
+  }
