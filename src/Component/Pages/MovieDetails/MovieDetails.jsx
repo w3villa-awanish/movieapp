@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./MovieDetails.scss";
-import {  MOVIE_DETAIL, RELATED_MOVIE } from "../../../endpoint";
+import { MOVIE_DETAIL, RELATED_MOVIE } from "../../../endpoint";
 import { useParams } from 'react-router-dom'
 import { NavLink, useNavigate } from "react-router-dom";
+import logo from "../../../assets/images/logo.png";
 
 
 export const MovieDetails = ({ fields }) => {
@@ -41,7 +42,13 @@ export const MovieDetails = ({ fields }) => {
           <div className="container">
             <div className="row g-0">
               <div className="col-lg-5 align-items-center d-flex justify-content-center">
-                <img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} alt={movieDetail.original_title} />
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`}
+                  alt={movieDetail.original_title}
+                  onError={(e) => {
+                    e.target.src = logo; // Set placeholder image on error
+                  }}
+                />
               </div>
               <div className="col-lg-7 align-items-center d-flex justify-content-center">
                 <div className="blog-details-hero-texts">
@@ -83,19 +90,19 @@ export const MovieDetails = ({ fields }) => {
                       </span>
                     ))}
                   </div>
-                  
-                  
+
+
                 </div>
               </div>
             </div>
             <div className="blog-details-hero-desc mt-5">
-                    <h4>About Movie</h4>
-                    {movieDetail?.overview}
-                  </div>
+              <h4>About Movie</h4>
+              {movieDetail?.overview}
+            </div>
           </div>
         </div>
       </div>
-      
+
       <section className="section-spacing-y">
         <div className="container">
           <div className="gx-5 row">
@@ -105,32 +112,38 @@ export const MovieDetails = ({ fields }) => {
               </div>
               <div className="gx-5 row blog-custom-row">
                 {
-                  
+
                   relatedMovie?.total_pages > 0 && relatedMovie?.results ?
-                  relatedMovie['results']?.map((field, index) => (
-                        <div className="col-lg-2 blog-custom-cols" key={index}>
-                          <div className="blog-card">
-                            <div className="img-box">
-                              <img src={`https://image.tmdb.org/t/p/w500/${field.poster_path}`} alt={field.original_title} />
-                            </div>
-                            <div className="created-by">
-                              <span>Release </span>
-                              <span>{field.release_date}</span>
-                            </div>
-                            <div className="card-heading">{field.original_title}</div>
-                            <div className="card-link">
-                              <NavLink to={`/movieDetail/${field.id}`}>Read More</NavLink>
-                            </div>
+                    relatedMovie['results']?.map((field, index) => (
+                      <div className="col-lg-2 blog-custom-cols" key={index}>
+                        <div className="blog-card">
+                          <div className="img-box">
+                            <img
+                              src={`https://image.tmdb.org/t/p/w500/${field.poster_path}`}
+                              alt={field.original_title}
+                              onError={(e) => {
+                                e.target.src = logo; // Set placeholder image on error
+                              }}
+                            />
+                          </div>
+                          <div className="created-by">
+                            <span>Release </span>
+                            <span>{field.release_date}</span>
+                          </div>
+                          <div className="card-heading">{field.original_title}</div>
+                          <div className="card-link">
+                            <a href={`/movieDetail/${field.id}`}>Read more</a>
                           </div>
                         </div>
-                      )) :
-                      <div className="col-lg-12 blog-custom-cols">
-                        <div className="blog-card">No Movie found</div>
                       </div>
+                    )) :
+                    <div className="col-lg-12 blog-custom-cols">
+                      <div className="blog-card">No Movie found</div>
+                    </div>
                 }
 
               </div>
-             
+
             </div>
 
           </div>
